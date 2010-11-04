@@ -1,0 +1,125 @@
+{% extends 'showcase/showcase.base.html' %}
+
+{% block title %}uttara's folio{% endblock %}
+{% block bodycss %}container_24 showcase1{% endblock %}
+
+{% block body %}
+<style type="text/css">
+/********************** showcase1 template **********************/
+.container_24 {
+  width: 900px;/* temporary, only for uttaras folio. */
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.showcase1 {
+  background: #3B3B3B url(/media/img/background-3b3b3b.png) repeat;
+}
+.showcase1 .top a {
+  color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.746094) 0px 1px 0px;
+}
+.showcase1 .top .title,
+.showcase1 .top .back {
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: #111 0px 2px 1px;
+}
+.showcase1 .top .back {
+  font-size: 14px;
+}
+.showcase1 .work ul li.thumbnail {
+  float:left;
+  padding: 5px;
+  margin: 7px 14px 7px 0px;
+  border: 1px groove #000;
+  -webkit-box-shadow: #444 0px 1px 0px;
+  position: relative;
+}
+.showcase1 .work ul li.thumbnail a.button {
+  background: url(/media/img/button-zoom.png) no-repeat 100% 100%;
+  border: 0px;
+  width: 45px;
+  height: 45px;
+  opacity: 0.7;
+  right: 7px;
+  bottom: 7px;
+  display: block;
+  text-indent: -9999em;
+  position: absolute;
+}
+.showcase1 .work ul li:hover a.button {
+  opacity: 1;
+}
+.showcase1 #fancybox-inner {
+  background: #fff;
+}
+.powered {
+  left: 0px;
+  bottom: 10px;
+  width: 96px;
+  opacity: 0.6;
+  padding: 3px;
+  position: absolute;
+  background-color: #d5ecf2;
+}
+.showcase1 img.thmb {
+  height: 150px;
+  width: 200px;
+}
+/********************** showcase2 template **********************/
+.showcase2 {
+  background: #3B3B3B url(/media/img/background-3b3b3b.png) repeat;
+}
+.showcase2 .work ul li.thumbnail {
+  float:left;
+  padding: 5px;
+  margin: 7px 14px 7px 0px;
+  border: 3px solid #000000;
+  -webkit-box-shadow: #444 0px 1px 0px;
+  position: relative;
+}
+.showcase2 .work ul li.thumbnail a.button {
+  background: url(/media/img/button-zoom1.png) no-repeat 100% 100%;
+  border: 0px;
+  width: 50px;
+  height: 50px;
+  opacity: 0.7;
+  top: 10px;
+  left: 10px;
+  display: block;
+  text-indent: -9999em;
+  position: absolute;
+}
+.showcase2 .work ul li:hover a.button {
+  opacity: 1;
+}
+.showcase2 img.thmb {
+  height: 500px;
+  width: 700px;
+}
+/********************** showcase3 template **********************/
+</style>
+
+<div class="grid_24 top">
+  <div class="grid_9 back"><a href="/uttara">back</a></div>
+  <div class="grid_6 title">My Portfolio</div>
+</div>
+<div class="grid_24 work">
+  <ul>
+    <li class="thumbnail hide">
+      <a href="#" rel="" class="thumb" title="">
+        <img class="thmb" src="">
+      </a>
+      <a href="#" rel="" class="group hide tmp"></a>
+      <a href="#" rel="" class="thumb button" title=""></a>
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="powered">run by <a href="http://itsabt.me">itsabt.me</a></div>
+
+<script src="{{ MEDIA_URL }}js/showcase.js"></script>
+{% endblock %}

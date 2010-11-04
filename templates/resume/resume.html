@@ -1,0 +1,298 @@
+{% extends 'resume/resume.base.html' %}
+
+{% block title %}uttara's resume{% endblock %}
+{% block bodycss %}container_24 basic tmpl4 des6{% endblock %}
+
+{% block body %}
+    <style type="text/css">
+      /********************** basic template **********************/
+      .basic {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .basic a {
+        color:#19558D;
+      }
+      .basic a:hover {
+        text-decoration: underline;
+      }
+      .basic a.external_link {
+        padding-right: 12px;
+        border-bottom:1px dotted #ccc;
+        background: url(http://d1vgw4v7ja2ido.cloudfront.net/-90274e5f8afafc5a.gif) no-repeat 100% 50%;
+      }
+      .basic .header, 
+      .basic .box {
+        margin: 5px 0;
+        padding: 10px 10px;
+        background: #EAF2F5;
+        border: 2px solid #BEDCE7;
+      }
+      .basic .name {
+        font-size: 30px;
+      }
+      .basic .box .title {
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 5px;
+      }
+      .basic .box ul {
+        margin-bottom: 5px; 
+      }
+      .basic .box ul li {
+        margin-bottom: 5px;
+      }
+      .basic .projects ul li {
+        margin-top: 15px;/*projects need better visibility.*/
+      }
+      .basic .interests ul li {
+        float: left; /*for horizontal layout.*/
+        padding-right: 5px;
+      }
+      .basic .box ul li span.name {
+        font-size: 16px;
+        display: block;
+      }
+      .basic .box ul li span.description {
+        font-size: 12px;
+        display: block;
+      }
+     /*********************** des1 ***************************/
+      .des1 .header, 
+      .des1 .box {
+        margin: 5px 0;
+        padding: 10px 10px;
+        background: #EAF2F5;
+        border: 0px solid #BEDCE7;
+      }
+     /*********************** des2 ***************************/
+      .des2 .header, 
+      .des2 .box {
+        margin: 5px 0;
+        background: none;
+        border: 0px solid #BEDCE7;
+      }
+      
+      /********************** template1 **********************/
+      .tmpl1 .header .name {
+        float: left;
+      }
+      .tmpl1 .header .contact {
+        float: right;
+        text-align: right;
+      }
+      /********************** template2 **********************/
+      .tmpl2 .box {
+        float: left;
+        width: 600px;
+      }
+      .tmpl2 .header {
+        float: right;
+        width: 300px;
+      }
+      /********************** template3 **********************/
+      .tmpl3 .box {
+        float: right;
+        width: 600px;
+      }
+      .tmpl3 .header {
+        float: left;
+        width: 300px;
+      }
+      /********************** template4 **********************/
+      .tmpl4 .header .name {
+        float: left;
+      }
+      .tmpl4 .header .contact {
+        float: right;
+        text-align: right;
+      }
+      .tmpl4 .box .title {
+        float: left;
+        width: 200px;
+        margin: 0 10px;
+        text-align: right;
+      }
+      .tmpl4 .box ul {
+        float: left;
+        width: 600px;
+        padding-top: 10px;
+      }
+      .tmpl4 .box .title {
+        padding-top: 8px;
+      }
+      .tmpl4 .projects ul li {
+        margin-top: 0px;
+        margin-bottom: 15px;
+      }
+      /********************** template4 var1 **********************/
+      .tmpl4-var1 .box .title {
+        float: right;
+        width: 200px;
+        margin: 0 10px;
+        text-align: right;
+      }
+      .tmpl4-var1 .box ul {
+        float: left;
+        width: 600px;
+      }
+      /********************** template4 var2 **********************/
+      .tmpl4-var2 .box .title {
+        float: left;
+        width: 100px;
+        margin: 0 10px;
+        text-align: left;
+      }
+      .tmpl4-var2 .box ul {
+        float: right;
+        width: 800px;
+      }
+    
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("div.tempchoose a").live('click', function(et){
+          var templ = $(this).attr('tmpl');
+          var tclass = $('body').attr('class');
+          tclass = tclass.replace(/tmpl[0-9]/, templ);
+          $("body").removeClass().addClass(tclass);
+        /* 
+         * $("body").removeClass().addClass("body container_24 basic " + templ);
+         */
+          return false;
+        });
+        $("div.deschoose a").live("click", function(et){
+          var des = $(this).attr('des');
+          var tclass = $('body').attr('class');
+          tclass = tclass.replace(/des[0-9]/, des);
+          $("body").removeClass().addClass(tclass);
+          return false;
+        });
+      });
+    </script>
+    
+    <div class="grid_24 tempchoose">
+        <a tmpl="tmpl1" href="#">template1</a>
+        <a tmpl="tmpl2" href="#">template2</a>
+        <a tmpl="tmpl3" href="#">template3</a>
+        <a tmpl="tmpl4" href="#">template4</a>
+        <a tmpl="tmpl4 tmpl4-var1" href="#">template5</a>
+        <a tmpl="tmpl4 tmpl4-var2" href="#">template6</a>
+    </div>
+    <div class="grid_24 deschoose">
+        <a des="des1" href="#">des1</a>
+        <a des="des2" href="#">des2</a>
+        <a des="des3" href="#">des3</a>
+        <a des="des4" href="#">des4</a>
+    </div>
+    
+    <div class="grid_24 header">
+      <div class="fld name">chaitanya sharma</div>
+      <div class="fld contact">
+        <p> <a class="email" href="mailto:chaitanya@3bandar.org">chaitanya@3bandar.org</a> </p>
+        <p> <a class="phone" href="#">+91-9650297770</a> </p>
+        <p> <a class="web" href="itsabt.me/chaitnaya">web</a> </p>
+      </div>
+    </div>
+    
+    <div class="grid_24 box objective">
+      <div class="title">Objective</div>
+      <span>Write great code, Make all things web.</span>
+    </div>
+    
+    <div class="grid_24 box interests">
+        <div class="title">Interests</div>
+        <ul>
+            <li>Web-Apps</li>
+            <li>Scalability</li>
+            <li>Design / Architecture</li>
+            <li>Data Structures</li>
+            <li>Algorithms</li>
+            <li>Languages</li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    
+    <div class="grid_24 box projects">
+      <div class="title">Projects</div>
+      <ul>
+        <li>
+          <span class="name">Icrack.it, educational service.</span>
+          <span class="description">A multi-tennant web application, designed to auto-scale upon high incoming user traffic. Frontend is deployed on GAE, with backend on AWS with MySQL as the persistence layer. Non Persistent caching enabled by memcache, internal queuing and messaging by AMQP, and tailored 'trickle' protocol between back and front ends.</span>
+        </li>
+        <li>
+          <span class="name">Bizkul.com, E-Learning portal.</span>
+          <span class="description">As a tech lead, setup the dev. environment, release procedures, planned features, multiple releases.</span>
+        </li>
+        <li>
+          <span class="name">Iphone pdf/ 3d model viewer + Presentation Remote</span>
+          <span class="description">An early iphone prototype hacked over a weeks time, checking feasibility and sales potential. Presentation Remote was a prototype to prove remote application controller for presentation tools.</span>
+        </li>
+        <li>
+          <span class="name">Ford Dealer Sites</span>
+          <span class="description">A massive CMS which was designed for over 5000 Ford Car Dealers. Primarily worked to implementing serverside functionalities in Java (Spring/Hibernate/Ecache). And worked on fronted features using HTML/CSS/JS/AJAX.</span>
+        </li>
+        <li>
+          <span class="name">Cartoon Rendering!</span>
+          <span class="description">A distributed system for automated cartoon rendering styles. (btech project, part of course work.)</span>
+        </li>
+        <li>
+          <span class="name">MediaPlayer Portable</span>
+          <span class="description">A standard media player designed extensively on the lines on XMMS2, usingJava2SDK. Part of the course work, where I lead the application design decision for my team of 10.</span>
+        </li>
+        <li>
+          <span class="name">Image Viewer</span>
+          <span class="description">built using the GTK+ and using LibPNG/ LibGIF, for reading and displaying basic (PNG/ GIF) image formats. (part of course work).</span>
+        </li>
+        <li>
+          <span class="name">Gtk Crossword</span>
+          <span class="description">GTK+ based crossword program, with a team of two. Part of the course work, where we implemented algorithms to generate new crosswords on each run.</span>
+        </li>
+      </ul>
+    </div>
+    
+    
+    <div class="grid_24 box employers">
+      <div class="title">Internships</div>
+      <ul>
+        <li>Rural Intern, Center for Social and Rural Development. Sholapur, Maharashtra. '05.</li>
+        <li>Student Intern, Google Summer Of Code '06.</li>
+        <li>Student Intern, Research Internship - DAIICT Gandhi Nagar '07.</li>
+        <li>Student Intern, Google Summer Of Code '08.</li>
+        <li>Student Intern, Kuliza Technologies Pvt Ltd '08.</li>
+      </ul>
+      <div class="clear"></div>
+      <div class="title">Employers</div>
+      <ul>
+        <li>Kuliza Technologies Pvt Ltd.</li>
+      </ul>
+    </div>
+    <div class="grid_24 box education">
+      <div class="title">Education</div>
+      <ul>
+        <li>
+          <span class="course">B.Tech, (ICT).</span>
+          <span class="school"><a class="external_link" target="_blank" href="#">DAIICT, Gandhinagar Gujarat.</a></span>
+          <span class"year">2008</span>
+        </li>
+        <li>
+          <span class="course">C.B.S.E, (12th)</span>
+          <span class="school"><a class="external_link" target="_blank" href="#">Central Academy Higher Sec. School, Kota.</a></span>
+          <span class"year">2003</span>
+        </li>
+        <li>
+          <span class="course">I.C.S.E, (10th).</span>
+          <span class="school"><a class="external_link" target="_blank" href="#">Queen Of Angels Convent School, Bharuch.</a></span>
+          <span class"year">2001</span>
+        </li>
+      </ul>
+    </div>
+    <div class="grid_24 box leadership">
+      <div class="title">Leadership Roles</div>
+      <ul>
+        <li>Chief CoOrdinator, DAIICT Linux Users Group '07 - '08</li>
+        <li>CoOrdinator, Marketing &amp; Sponsorship, Team Synapse '05 &amp; '06</li>
+        <li>Project Lead, the Software Engineering project.</li>
+        <li>Editor, Monthly School Magazine.</li>
+      </ul>
+    </div>
+{% endblock %}

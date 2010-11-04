@@ -1,0 +1,597 @@
+{% extends 'splashpg/splashpg.base.html' %}
+
+{% block title %}uttara rao{% endblock %}
+{% block bodycss %}container_24 uttara{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("div.tempchoose a").live("click", function(et){
+      var templ = $(this).attr("tmpl");
+      $("body").removeClass().addClass("body container_24 basic " + templ);
+      return false;
+    });
+  });
+</script>
+
+<style type="text/css">
+/*********************** basic layout.css ***********************/
+a {
+  color: #000;
+}
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+body.container_24 {
+  width: 1024px;
+}
+body.container_24 .grid_24 {
+  width: 1024px;
+  margin-left: 0;
+  margin-right: 0;
+}
+body.container_24 div.powered {
+  left: 0px;
+  bottom: 10px;
+  width: 96px;
+  opacity: 0.6;
+  padding: 3px;
+  font-size: 13px;
+  font-family: "Garamond", Arial, Helvetica, sans-serif;
+  position: absolute;
+  background-color: #d5ecf2;
+}
+body.container_24 div.tempchoose {
+  right: 0px;
+  bottom: 10px;
+  width: 250px;
+  opacity: 0.6;
+  padding: 3px;
+  font-size: 13px;
+  font-family: "Garamond", Arial, Helvetica, sans-serif;
+  position: absolute;
+  background-color: #d5ecf2;
+}
+/*********************** uttara.css ***********************/
+.uttara {
+  color: #000;
+  background: #000;
+  font-family: "Garamond", Arial, Helvetica, sans-serif;
+}
+.uttara .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000 url(/media/img/uttara2.jpg) no-repeat;
+}
+.uttara .fld {
+  margin-bottom: 3px;
+}
+.uttara .container {
+  top: 75px;
+  left: 60px;
+  width: 330px;
+  padding: 10px 10px;
+  position: absolute;
+  opacity: 0.8;
+  background-color: #d5ecf2;
+}
+.uttara .banner {
+  display:none;
+}
+.uttara .name, 
+.uttara .desig, 
+.uttara .aboutme, 
+.uttara .folio, 
+.uttara .resume, 
+.uttara .contact{
+  font-size: 14px;
+  background: none;
+  text-align: center;
+}
+.uttara .aboutme, 
+.uttara .desig, 
+.uttara .folio {
+  margin-bottom: 25px;
+}
+.uttara .name {
+  height: 50px;
+  font-size: 60px;
+  padding-bottom: 5px;
+}
+.uttara .desig {
+  font-size: 12px;
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+.uttara .folio {
+  margin-left: 100px;
+  text-align:center;
+}
+.uttara .folio ul li {
+  float: left;
+  padding-right: 10px;
+}
+.uttara .folio ul li.el3 {
+  display: none;
+}
+.uttara .contact .left {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+}
+.uttara .contact .right {
+  font-size: 13px;
+  float: right;
+  text-align: right;
+}
+.uttara .email{
+  font-weight: bold;
+}
+/*********************** karan.css ***********************/
+.karan {
+  color: #000;
+  background: #000;
+  font-size: 20px;
+  font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+  /*Tangerine|Inconsolata|Droid+Sans|Reenie+Beanie|IM+Fell+DW+Pica|Yanone+Kaffeesatz">*/
+}
+.karan .fld {
+  margin-bottom: 3px;
+}
+.karan .banner {
+  display:none;
+}
+.karan .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000000 url(/media/img/karan.jpg) no-repeat;
+}
+.karan .container {
+  right: 50px;
+  bottom: 50px;
+  width: 350px;
+  opacity: 0.3;
+  color: #000000;
+  padding: 15px 10px;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.karan .name,
+ .karan .desig,
+ .karan .aboutme, 
+ .karan .folio, 
+ .karan .resume, 
+ .karan .contact {
+  font-size: 14px;
+  background: none;
+  text-align: center;
+}
+.karan .name {
+  height: 50px;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+.karan .desig {
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+.karan .desig, .karan  .contact {
+  font-size: 14px;
+}
+.karan .aboutme, 
+.karan .desig, 
+.karan .folio {
+  padding-bottom: 25px;
+}
+.karan .folio {
+  display: none;
+}
+.karan .folio a {
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.karan .contact {
+  margin-top: 10px;
+}
+.karan .contact .left {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+}
+.karan .contact .right {
+  font-size: 13px;
+  float: right;
+  text-align: right;
+}
+.karan .email{
+  font-weight: bold;
+}
+/*********************** jayant.css ***********************/
+.jayant {
+  color: #fff;
+  font-size: 18px;
+  background: #000;
+  font-family: "Yanone Kaffeesatz", Arial, Helvetica, sans-serif;
+  /*Tangerine|Inconsolata|Droid+Sans|Reenie+Beanie|IM+Fell+DW+Pica|Yanone+Kaffeesatz">*/
+}
+.jayant .fld {
+  margin-bottom: 10px;
+}
+.jayant .banner {
+  display:none;
+}
+.jayant .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000000 url(/media/img/jayan.jpg) no-repeat;
+}
+.jayant .container {
+  right: 0;
+  width: 200px;
+  height: 100%;
+  opacity: 0.6;
+  color: #ffffff;
+  position: absolute;
+  background: #000;
+}
+.jayant .name,
+.jayant .desig,
+.jayant .aboutme,
+.jayant .folio,
+.jayant .resume, 
+.jayant .contact{
+  font-size: 14px;
+  background: none;
+}
+.jayant .desig, .jayant  .contact {
+  font-size: 14px;
+}
+.jayant .aboutme, 
+.jayant .desig, 
+.jayant .folio {
+  margin-bottom: 25px;
+}
+.jayant .name {
+  height: 50px;
+  font-size: 40px;
+  margin: 25px 10px 0 10px;
+}
+.jayant .desig {
+  text-align: left;
+  margin-left: 10px;
+}
+.jayant .aboutme {
+  margin: 25px 10px;
+}
+.jayant .folio {
+  margin-top: 160px;
+}
+.jayant .folio a {
+  color: #fff;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.jayant .contact {
+  margin-top: 160px;
+}
+.jayant .contact .left {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+  margin: 10px;
+}
+.jayant .contact .right {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+  margin: 10px;
+}
+.jayant .email{
+  font-weight: bold;
+}
+/*********************** bernoulli.css ***********************/
+.bernoulli {
+  color: #fff;
+  font-size: 18px;
+  background: #000;
+  font-family: "IM Fell DW Pica", Arial, Helvetica, sans-serif;
+  /*Tangerine|Inconsolata|Droid+Sans|Reenie+Beanie|IM+Fell+DW+Pica|Yanone+Kaffeesatz">*/
+}
+.bernoulli .fld {
+  margin-bottom: 10px;
+}
+.bernoulli .banner {
+  display:none;
+}
+.bernoulli .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000000 url(/media/img/bernoulli.jpg) no-repeat;
+}
+.bernoulli .container {
+  left: 0;
+  height: 100%;
+  width: 200px;
+  opacity: 0.6;
+  color: #ffffff;
+  position: absolute;
+  background: #000;
+}
+.bernoulli .name,
+.bernoulli .desig,
+.bernoulli .aboutme,
+.bernoulli .folio,
+.bernoulli .resume, 
+.bernoulli .contact{
+  color: #ffffff;
+  font-size: 14px;
+  background: none;
+}
+.bernoulli .aboutme, 
+.bernoulli .desig, 
+.bernoulli .folio {
+  margin-bottom: 25px;
+}
+.bernoulli .name {
+  height: 50px;
+  font-size: 40px;
+  margin: 25px 10px 0 10px;
+}
+.bernoulli .desig {
+  text-align: left;
+  margin-left: 10px;
+}
+.bernoulli .aboutme {
+  margin: 25px 10px;
+}
+.bernoulli .folio {
+  text-align:center;
+  margin-left: 10px;
+  margin-top: 160px;
+}
+.bernoulli .folio ul li {
+  float: left;
+  padding-right: 10px;
+}
+.bernoulli .folio ul li.el3 {
+  display: none;
+}
+.bernoulli .folio ul li a {
+  color: #ffffff;
+}
+.bernoulli .contact {
+  margin-top: 200px;
+}
+.bernoulli .contact .left {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+  margin: 10px;
+}
+.bernoulli .contact .right {
+  font-size: 13px;
+  float: left;
+  text-align: left;
+  margin: 10px;
+}
+.bernoulli .email{
+  font-weight: bold;
+}
+/*********************** pyro.css ***********************/
+.pyro {
+  color: #fff;
+  font-size: 16px;
+  background: #000;
+  font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+  /*Tangerine|Inconsolata|Droid+Sans|Reenie+Beanie|IM+Fell+DW+Pica|Yanone+Kaffeesatz">*/
+}
+.pyro .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000000 url(/media/img/pyro.jpg) no-repeat;
+}
+.pyro .container {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  opacity: 0.6;
+  color: #ffffff;
+  position: absolute;
+  background: #000;
+}
+.pyro .banner {
+  display: none;
+}
+.pyro .fld {
+  margin-bottom: 10px;
+}
+.pyro .aboutme, 
+.pyro .desig, 
+.pyro .folio {
+  margin-bottom: 25px;
+}
+.pyro .name {
+  height: 50px;
+  font-size: 60px;
+  margin: 25px 10px 0 10px;
+  float: left;
+}
+.pyro .desig {
+  display: none;
+}
+.pyro .aboutme {
+  display: none;
+}
+.pyro .folio {
+  float: right;
+  margin-top: 35px;
+  text-align:center;
+  margin: 15px 0 0 10px;
+}
+.pyro .folio ul li {
+  float: left;
+  padding-right: 10px;
+}
+.pyro .folio ul li a {
+  color: #ffffff;
+  font-size: 16px;
+  padding-right: 10px;
+}
+.pyro .contact {
+  display: none;
+}
+.pyro .contact .left,
+.pyro .contact .right {
+}
+.pyro .email{
+  font-weight: bold;
+}
+/*********************** tanvi.css ***********************/
+.tanvi {
+  color: #fff;
+  font-size: 16px;
+  background: #000;
+  font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+  /*Tangerine|Inconsolata|Droid+Sans|Reenie+Beanie|IM+Fell+DW+Pica|Yanone+Kaffeesatz">*/
+}
+.tanvi .metacontainer {
+  height:100%;
+  position:absolute;
+  background: #000000 url(/media/img/backyard.jpg) no-repeat;
+}
+.tanvi .container {
+  bottom: 50px;
+  right: 50px;
+  width: 450px;
+  padding: 30px 10px;
+  position: absolute;
+  opacity: 0.5;
+  color: #000000;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.tanvi .fld {
+  margin-bottom: 10px;
+}
+.tanvi .aboutme, .tanvi .desig, .tanvi .folio {
+  margin-bottom: 25px;
+}
+.tanvi .name {
+  font-size: 80px;
+  margin: 25px 10px 0 10px;
+}
+.tanvi .desig {
+  display: block;
+  text-align: right;
+  margin: 0px 60px;
+}
+.tanvi .aboutme {
+  display: none;
+}
+.tanvi .folio {
+  float: right;
+  margin-top: 35px;
+  text-align:center;
+  margin: 15px 0 0 10px;
+}
+.tanvi .folio ul li {
+  float: left;
+  padding-right: 10px;
+}
+.tanvi .folio ul li a {
+  color: #ffffff;
+  font-size: 16px;
+  padding-right: 10px;
+}
+.tanvi .folio {
+  display: none;
+}
+.tanvi .contact {
+  display: none;
+}
+.tanvi .contact .left,
+.tanvi .contact .right {
+}
+.tanvi .email{
+  font-weight: bold;
+}
+.tanvi .banner {
+  top: 0px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+  color: #ffffff;
+  background: #000000;
+  margin: 0px;
+  padding: 10px 0;
+}
+.tanvi .banner ul li {
+  float: left;
+  padding-right: 10px;
+}
+.tanvi .banner ul li a {
+  color: #ffffff;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+</style>
+
+<div class="grid_24 metacontainer">
+  <div class="banner">
+    <ul>
+      <li class="el1"><a href="/showcase">Portfolio</a></li>
+      <li class="el2"><a href="#">Resume</a></li>
+      <li class="el3"><a href="#">Contact</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <div class="container">
+    <div class="flh name">Uttara Rao
+      <!--a href="#"><img src="/media/img/uttaraheader3.png"></a-->
+    </div>
+    <div class="fld desig">Copywriter, the<b>hive</b></div>
+    <div class="fld aboutme">
+      <div class="firstline">When I go looking for gravity,</div>
+      <div class="secondline">I never settle for just an apple.</div>
+    </div>
+    <div class="fld folio">
+      <ul>
+        <li class="el1"><a href="/uttara/showcase">Portfolio</a></li>
+        <li class="el2"><a href="/uttara/resume">Resume</a></li>
+        <li class="el3"><a href="#">Contact</a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="fld contact">
+      <div class="left">
+        <div class="firstline">B-6/39/2, Safdarjung enclave</div>
+        <div class="secondline">New Delhi - 110029</div>
+      </div>
+      <div class="right">
+        <div class="phone">+91-9911406992</div>
+        <div class="email">uttara.rao@gmail.com</div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div class="powered">run by <a href="http://itsabt.me">itsabt.me</a></div>
+<div class="tempchoose">
+  <a tmpl="uttara" href="#">uttara</a>
+  <a tmpl="karan" href="#">karan</a>
+  <a tmpl="jayant" href="#">jayant</a>
+  <a tmpl="bernoulli" href="#">bernoulli</a>
+  <a tmpl="pyro" href="#">pyro</a>
+  <a tmpl="tanvi" href="#">tanvi</a>
+  <a tmpl="gopi" href="#">gopi</a>
+</div>
+{% endblock %}

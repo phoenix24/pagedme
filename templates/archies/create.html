@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <div class="grid_16 ctrl edit">
+    <ul class="actions nav">
+      <li class="act edit"><a href="#edit-card" title="edit card">edit</a></li>
+      <li class="act preview"><a href="#preivew-card" title="preview the card">preivew</a></li>
+      <li class="act reset"><a href="#reset-card" title="reset your changes">reset</a></li>
+      <li class="act perm"><a href="#perm-card" title="set the card permissions">permission</a></li>
+      <li class="act share"><a href="#share-card" title="share / send the card">share</a></li>
+      <li class="act help"><a href="#help-card" title="view help on the card">help</a></li>
+    </ul>
+  </div>
+  
+  <div class="cb"></div>
+  
+  <div class="grid_12 crdbx edit">
+    <div class="grid_12 alpha omega box media">
+      <div class="grid_10 alpha omega preview"></div>
+      <div class="grid_2 omega nav">
+        <ul class="actions">
+          <li class="act add-recvideo">
+            <a href="#add-recvideo" title="record a video">Record Video</a>
+            <div id="add-recvideo" class="form">
+              <a class="close" href="">close</a>
+              <a class="cancel" href="">cancel</a>
+              <a class="save" href="">save</a>
+              <form action="{% url addvideo %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="videourl">
+              </form>
+            </div>
+          </li>
+          <li class="act add-video">
+            <a href="#add-video" title="add a video">Add Video</a>
+            <div id="add-video" class="form">
+              <a class="close" href="">close</a>
+              <a class="cancel" href="">cancel</a>
+              <a class="save" href="">save</a>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </p>
+              <form id="add-video" action="{% url addvideo %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="videourl">
+              </form>
+            </div>
+          </li>
+          <li class="act add-pic">
+            <a href="#add-pic" title="add a picture">Add Photo</a>
+            <div id="add-pic" class="form">
+              <a class="close" href="">close</a>
+              <a class="cancel" href="">cancel</a>
+              <a class="save" href="">save</a>
+              <form id="add-pic" action="{% url addpic %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="imgurl">
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid_12 alpha omega box txtmsg">
+      <div class="grid_10 alpha omega preview">
+      </div>
+      <div class="grid_2 omega nav">
+        <ul class="actions">
+          <li class="act add-msg">
+            <a href="#add-msg" title="add a message">Message</a>
+            <div id="add-msg" class="form">
+              <a class="close" href="">close</a>
+              <a class="cancel" href="">cancel</a>
+              <a class="save" href="">save</a>
+              <form id="add-msg" class="addmsg" action="{% url addmsg %}" method="POST" >
+                {% csrf_token %}
+                <textarea></textarea>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid_12 alpha omega box permissions">
+        <form class="addpasswd" action="{% url addpasswd %}" method="POST" >
+        </form>
+    </div>
+  </div>
+  
+  <div class="grid_4 helpbx edit">
+    <div class="qrcode">
+      <img src="http://chart.apis.google.com/chart?cht=qr&chs=250x250&chl=http%3A%2F%2Fhello.world">
+    </div>
+    <div class="qrinfo"></div>
+  </div>
+  
+  <div class="cb"></div>
+{% endblock %}
